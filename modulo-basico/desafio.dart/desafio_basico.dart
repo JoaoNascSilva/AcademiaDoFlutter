@@ -15,8 +15,9 @@ void main() {
   //  2 - Agrupar os pacientes por familia(considerar o sobrenome) apresentar por familia
 
   int pacientesAcimaDeVinteAnos = 0;
-  pacientes.forEach((x) =>
-      {if (int.tryParse(x.split('|')[1]) > 20) pacientesAcimaDeVinteAnos++});
+  pacientes.forEach((x) => {
+        if (int.parse(x.split('|')[1]) > 20) pacientesAcimaDeVinteAnos++,
+      });
   print(
       'Quantidade de pacientes com mais de 20 anos: ${pacientesAcimaDeVinteAnos}');
 
