@@ -8,11 +8,11 @@ class DataBaseConnection implements IDataBaseConnection {
 
   final DatabaseConnectionConfiguration _configuration =
       DatabaseConnectionConfiguration(
-    databasename: 'pizza_delivery',
+    databasename: 'ibge',
     host: 'localhost',
     port: 3306,
     user: 'root',
-    password: 'pizza_delivery',
+    password: 'ibge',
   );
 
   @override
