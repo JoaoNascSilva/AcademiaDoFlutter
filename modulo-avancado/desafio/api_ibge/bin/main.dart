@@ -1,4 +1,4 @@
-import 'package:api_ibge/application/DataBaseException.dart';
+import 'package:api_ibge/data/database/DataBaseException.dart';
 import 'package:api_ibge/data/database/database_connection.dart';
 import 'package:api_ibge/repository/municipio_repository.dart';
 import 'package:api_ibge/repository/regiao_repository.dart';

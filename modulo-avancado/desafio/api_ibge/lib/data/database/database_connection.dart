@@ -1,4 +1,4 @@
-import 'package:api_ibge/application/DataBaseException.dart';
+import 'package:api_ibge/data/database/DataBaseException.dart';
 import 'package:api_ibge/data/database/databaseconnection_configuration.dart';
 import 'package:api_ibge/data/database/i_database_connection.dart';
 import 'package:mysql1/mysql1.dart';

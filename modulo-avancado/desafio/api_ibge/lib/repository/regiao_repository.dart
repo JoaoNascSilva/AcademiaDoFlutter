@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:api_ibge/application/DataBaseException.dart';
+import 'package:api_ibge/data/database/DataBaseException.dart';
 import 'package:api_ibge/data/database/database_connection.dart';
 import 'package:api_ibge/data/rest_api.dart';
-import 'package:api_ibge/model/constantes/constants.dart';
+import 'package:api_ibge/model/constants.dart';
 import 'package:api_ibge/model/regiao.dart';
 import 'package:mysql1/mysql1.dart';
 
