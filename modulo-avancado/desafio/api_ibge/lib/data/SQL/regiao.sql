@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS regiao (
+  id INT NOT NULL,
+  sigla VARCHAR(2) NOT NULL,
+  nome VARCHAR(12) NOT NULL,
+  PRIMARY KEY (id)
+)
+ENGINE = InnoDB;

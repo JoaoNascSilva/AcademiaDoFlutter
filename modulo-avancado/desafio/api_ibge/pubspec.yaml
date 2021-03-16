@@ -1,0 +1,12 @@
+name: api_ibge
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  mysql1: ^0.17.1
+  dio: ^3.0.10
+
+dev_dependencies:
