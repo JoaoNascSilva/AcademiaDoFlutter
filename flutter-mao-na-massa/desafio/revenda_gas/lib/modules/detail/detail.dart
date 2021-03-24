@@ -221,10 +221,13 @@ class _HomeDetailState extends State<HomeDetail> {
             ),
           ),
           Container(
+            margin: EdgeInsets.all(2),
             height: 30,
             width: 30,
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Color(
+                int.parse('FF${companhia.cor}', radix: 16),
+              ),
               borderRadius: BorderRadius.all(
                 Radius.circular(90),
               ),
@@ -237,11 +240,9 @@ class _HomeDetailState extends State<HomeDetail> {
                 });
               },
               child: Center(
-                child: Text(
-                  '--',
-                  style: TextStyle(
-                    fontSize: 24,
-                  ),
+                child: Icon(
+                  Icons.exposure_minus_1_outlined,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -286,10 +287,13 @@ class _HomeDetailState extends State<HomeDetail> {
             ],
           ),
           Container(
-            height: 30,
-            width: 30,
+            margin: EdgeInsets.all(2),
+            height: 34,
+            width: 34,
             decoration: BoxDecoration(
-              color: Colors.grey,
+              color: Color(
+                int.parse('FF${companhia.cor}', radix: 16),
+              ),
               borderRadius: BorderRadius.all(
                 Radius.circular(90),
               ),
@@ -302,11 +306,9 @@ class _HomeDetailState extends State<HomeDetail> {
                 });
               },
               child: Center(
-                child: Text(
-                  '+',
-                  style: TextStyle(
-                    fontSize: 24,
-                  ),
+                child: Icon(
+                  Icons.plus_one_outlined,
+                  color: Colors.white,
                 ),
               ),
             ),
@@ -434,8 +436,10 @@ class _HomeDetailState extends State<HomeDetail> {
         margin: EdgeInsets.only(bottom: 20),
         height: 80,
         width: 280,
-        child: MaterialButton(
-          onPressed: () {},
+        child: InkWell(
+          onTap: () {
+            print('Pagamento');
+          },
           child: Center(
             child: Text(
               'IR PARA PAGAMENTO',
@@ -446,7 +450,6 @@ class _HomeDetailState extends State<HomeDetail> {
               ),
             ),
           ),
-          //color: Colors.transparent,
         ),
       ),
     );
