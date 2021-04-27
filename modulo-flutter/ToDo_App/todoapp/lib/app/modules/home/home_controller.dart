@@ -15,10 +15,7 @@ class HomeController extends ChangeNotifier {
   var dateFormat = DateFormat('dd/MM/yyyy');
 
   HomeController({this.repository}) {
-    // repository.saveToDo(DateTime.now(), 'Momento de Leitura');
-    // repository.saveToDo(DateTime.now().add(Duration(minutes: 30)), 'Dormir');
-    repository.saveToDo(
-        DateTime.now().add(Duration(hours: 22)), 'Estudar Flutter');
+    repository.saveToDo(DateTime.now(), 'Momento de Leitura');
     // repository.saveToDo(DateTime.now().add(Duration(hours: 24)), 'Dormir');
     findAllForWeek();
   }
@@ -98,11 +95,16 @@ class HomeController extends ChangeNotifier {
     var todos = await repository.findByPeriod(daySelected, daySelected);
 
     if (todos.isEmpty) {
-      listTodos = {dateFormat.format(DateTime.now()): []};
+      listTodos = {dateFormat.format(daySelected): []};
     } else {
       listTodos =
           groupBy(todos, (ToDoModel todo) => dateFormat.format(todo.dateHour));
     }
     this.notifyListeners();
+  }
+
+  void update() {
+    if (selectedTab == 1) this.findAllForWeek();
+    if (selectedTab == 2) this.findToDosBySelectedDay();
   }
 }

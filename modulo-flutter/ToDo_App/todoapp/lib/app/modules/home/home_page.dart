@@ -176,8 +176,13 @@ class BodyListTodo extends StatelessWidget {
                     Container(
                       decoration: BoxDecoration(),
                       child: IconButton(
-                        onPressed: () => Navigator.of(context)
-                            .pushNamed(NewTaskPage.routerName, arguments: day),
+                        onPressed: () async {
+                          await Navigator.of(context).pushNamed(
+                            NewTaskPage.routerName,
+                            arguments: dayKey,
+                          );
+                          controller.update();
+                        },
                         icon: Icon(
                           Icons.add_circle_outlined,
                           size: 38,
