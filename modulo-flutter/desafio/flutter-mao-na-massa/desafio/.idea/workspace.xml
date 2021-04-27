@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="8bd9c436-44e9-49ea-b5e3-d9c8a97702d0" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/.metadata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/debug/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/kotlin/com/example/revenda_gas/MainActivity.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/res/drawable/launch_background.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/main/res/values/styles.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/app/src/profile/AndroidManifest.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/gradle.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/android/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/assets/images/2.0x/gas-bottle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/assets/images/3.0x/gas-bottle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/assets/images/gas-bottle.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/assets/server/dados.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Flutter/AppFrameworkInfo.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Flutter/Debug.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Flutter/Release.xcconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcodeproj/project.pbxproj" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcodeproj/project.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcodeproj/xcshareddata/xcschemes/Runner.xcscheme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/AppDelegate.swift" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-1024x1024@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-20x20@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-29x29@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-40x40@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-60x60@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@1x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-76x76@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/AppIcon.appiconset/Icon-App-83.5x83.5@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/LaunchImage.imageset/Contents.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@2x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/LaunchImage.imageset/LaunchImage@3x.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Assets.xcassets/LaunchImage.imageset/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Base.lproj/Main.storyboard" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Info.plist" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/ios/Runner/Runner-Bridging-Header.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/main.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/model/companhia.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/detail/detail.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/detail/widget/progresso.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/home/home_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/home/widgets/descricao_marca.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/home/widgets/nota_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/home/widgets/preco_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/home/widgets/tag_melhor_preco_widget.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/modules/home/widgets/tempo_medio.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/lib/repositories/CompanhiaRepository.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/pubspec.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../../flutter-mao-na-massa/desafio/revenda_gas/test/widget_test.dart" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
+  </component>
+  <component name="ProjectId" id="1qENlwnU2XlCDpHr3etm2QO7NsN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="dart.analysis.tool.window.visible" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
+    <property name="show.migrate.to.gradle.popup" value="false" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8bd9c436-44e9-49ea-b5e3-d9c8a97702d0" name="Default Changelist" comment="" />
+      <created>1616640943964</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616640943964</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="523" y="120" width="634" height="780" key="find.popup" timestamp="1616641066990">
+      <screen x="0" y="0" width="1680" height="1020" />
+    </state>
+    <state x="523" y="120" width="634" height="780" key="find.popup/0.0.1680.1020/-1680.-25.1680.1020@0.0.1680.1020" timestamp="1616641066990" />
+  </component>
+</project>
