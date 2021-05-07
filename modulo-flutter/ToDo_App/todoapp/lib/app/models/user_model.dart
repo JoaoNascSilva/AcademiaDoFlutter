@@ -5,12 +5,16 @@ class UserModel {
   String name;
   String email;
   String password;
+  bool isActive;
+  String theme;
 
   UserModel({
     this.id,
     this.name,
     this.email,
     this.password,
+    this.isActive,
+    this.theme,
   });
 
   Map<String, dynamic> toMap() {
@@ -19,6 +23,8 @@ class UserModel {
       'name': name,
       'email': email,
       'password': password,
+      'isActive': isActive,
+      'theme': theme,
     };
   }
 
@@ -28,6 +34,8 @@ class UserModel {
       name: map['name'],
       email: map['email'],
       password: map['password'],
+      isActive: map['isActive'],
+      theme: map['theme'],
     );
   }
 

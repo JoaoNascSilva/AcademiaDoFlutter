@@ -48,7 +48,7 @@ class Connection {
   }
 
   FutureOr<void> _onUpgrade(Database database, int oldVersion, int newVersion) {
-    var batch = database.batch();
+    //var batch = database.batch();
   }
 
   FutureOr<void> _onCreate(Database database, int version) async {

@@ -1,14 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-
 import 'package:revenda_gas/app/repositories/todos_repository.dart';
 
 class NewTaskController extends ChangeNotifier {
   final formKey = GlobalKey<FormState>();
   final ToDosRepository repository;
   final DateFormat dateFormat = DateFormat('dd/MM/yyyy');
-  DateTime daySelected;
+
   TextEditingController nomeTaskController = TextEditingController();
+
+  DateTime daySelected;
   bool saved = false;
   bool loading = false;
   String error;

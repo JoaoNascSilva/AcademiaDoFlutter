@@ -9,18 +9,18 @@ class HomeController extends ChangeNotifier {
   final ToDosRepository repository;
   int selectedTab = 1;
   DateTime daySelected;
+  int idUser;
   DateTime startFilter;
   DateTime endFilter;
   Map<String, List<ToDoModel>> listTodos;
   var dateFormat = DateFormat('dd/MM/yyyy');
+  final formKey = GlobalKey<FormState>();
 
   HomeController({this.repository}) {
-    repository.saveToDo(DateTime.now(), 'Momento de Leitura');
-    // repository.saveToDo(DateTime.now().add(Duration(hours: 24)), 'Dormir');
     findAllForWeek();
   }
 
-  void changeSelectedTab(BuildContext context, index, ThemeData theme) async {
+  void changeSelectedTab(BuildContext context, index) async {
     selectedTab = index;
     switch (index) {
       case 0:
@@ -32,8 +32,45 @@ class HomeController extends ChangeNotifier {
       case 2:
         daySelected = await showDatePicker(
           builder: (context, child) {
+            // return Theme(
+            //   data: ThemeData(
+            //     colorScheme: ColorScheme(
+            //       surface: Colors.pink,
+            //       onSurface: Colors.grey[900],
+            //       primary: AppColors.primaryColor,
+            //       onPrimary: Colors.white,
+            //       secondary: Colors.pink,
+            //       onSecondary: Colors.white,
+            //       error: Colors.cyanAccent,
+            //       onError: Colors.red[800],
+            //       primaryVariant: Colors.green[800],
+            //       secondaryVariant: Colors.redAccent,
+            //       background: Colors.grey[300],
+            //       onBackground: Colors.grey[300],
+            //       brightness: Brightness.light,
+            //     ),
+            //   ),
+            //   child: child,
+            // );
+
             return Theme(
-              data: theme,
+              data: ThemeData(
+                colorScheme: ColorScheme(
+                  surface: Colors.grey[800],
+                  onSurface: Colors.grey[200],
+                  primary: Colors.white,
+                  onPrimary: Colors.black,
+                  secondary: Colors.pink,
+                  onSecondary: Colors.white,
+                  error: Colors.cyanAccent,
+                  onError: Colors.red[800],
+                  primaryVariant: Colors.green[800],
+                  secondaryVariant: Colors.redAccent,
+                  background: Colors.grey[300],
+                  onBackground: Colors.grey[300],
+                  brightness: Brightness.dark,
+                ),
+              ),
               child: child,
             );
           },
@@ -46,9 +83,10 @@ class HomeController extends ChangeNotifier {
         findToDosBySelectedDay();
         break;
       case 3:
-        Navigator.pushNamed(
+        Navigator.pushNamedAndRemoveUntil(
           context,
           LogInPage.routerName,
+          (route) => false,
         );
         break;
     }
@@ -78,8 +116,8 @@ class HomeController extends ChangeNotifier {
 
   void checkOrUnCheck(ToDoModel todo) {
     todo.isfinished = !todo.isfinished;
-    this.notifyListeners();
     repository.checkorUncheckToDo(todo);
+    this.notifyListeners();
   }
 
   void filterFinalized() {
@@ -103,8 +141,13 @@ class HomeController extends ChangeNotifier {
     this.notifyListeners();
   }
 
-  void update() {
-    if (selectedTab == 1) this.findAllForWeek();
-    if (selectedTab == 2) this.findToDosBySelectedDay();
+  Future<void> remove(int id) async {
+    await repository.removeTodo(id);
+    this.notifyListeners();
+  }
+
+  Future<void> update() async {
+    if (selectedTab == 1) await this.findAllForWeek();
+    if (selectedTab == 2) await this.findToDosBySelectedDay();
   }
 }

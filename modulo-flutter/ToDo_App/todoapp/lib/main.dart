@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/widgets.dart';
 import 'package:revenda_gas/app/database/connection.dart';
@@ -12,41 +11,21 @@ import 'package:revenda_gas/app/modules/login/signup_page.dart';
 import 'package:revenda_gas/app/modules/new_task.dart/new_task_controller.dart';
 import 'package:revenda_gas/app/repositories/todos_repository.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:revenda_gas/app/repositories/user_repository.dart';
+import 'package:revenda_gas/app/theme/app_theme.dart';
 import 'app/modules/new_task.dart/new_task_page.dart';
-import 'app/theme/dark_theme.dart';
-import 'app/theme/light_theme.dart';
 
 void main() => runApp(MyApp());
-
-var theme = ThemeData(); // darkTheme();
-
-var themeDark = darkTheme();
-var themeLight = lightTheme();
 
 class MyApp extends StatefulWidget {
   @override
   _MyAppState createState() => _MyAppState();
 }
 
+ThemeData theme;
+
 class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
-  bool setThemeDark = false;
   bool isLoading = false;
-
-  void _updateTheme() {
-    //-- Codigo abaixo e para alterar pela Configuracao do Aparelho/Plataforma
-    //var brightness = WidgetsBinding.instance.window.platformBrightness;
-    //brightness == Brightness.dark ? theme = themeDark : theme = themeClaro;
-    theme = setThemeDark ? darkTheme() : lightTheme();
-
-    setState(() {
-      setThemeDark = !setThemeDark;
-    });
-  }
-
-  @override
-  void didChangePlatformBrightness() {
-    _updateTheme();
-  }
 
   @override
   void didChangeAppLifecycleState(AppLifecycleState state) {
@@ -67,10 +46,6 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
   void initState() {
     super.initState();
     WidgetsBinding.instance.addObserver(this);
-    setState(() {
-      this.isLoading = false;
-    });
-    _updateTheme();
   }
 
   @override
@@ -86,6 +61,19 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
         Provider(
           create: (_) => ToDosRepository(),
         ),
+        Provider(
+          create: (_) => UserRepository(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => NewTaskController(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) => SignUpController(),
+        ),
+        ChangeNotifierProvider(
+          create: (_) =>
+              LogInController(repository: context.read<UserRepository>()),
+        ),
       ],
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
@@ -96,7 +84,7 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
           Locale('pt'),
         ],
         title: 'ToDo App',
-        theme: theme,
+        theme: AppTheme().darkTheme, // : AppTheme().lightTheme,
         routes: {
           NewTaskPage.routerName: (_) => ChangeNotifierProvider(
                 create: (context) {
@@ -106,79 +94,36 @@ class _MyAppState extends State<MyApp> with WidgetsBindingObserver {
                     day: day,
                   );
                 },
-                child: NewTaskPage(themeData: theme),
+                child: NewTaskPage(),
               ),
           HomePage.routerName: (_) => ChangeNotifierProvider(
                 create: (context) {
                   var repository = context.read<ToDosRepository>();
-                  return HomeController(repository: repository);
+                  return HomeController(
+                    repository: repository,
+                  );
                 },
-                child: HomePage(themeData: theme),
+                child: HomePage(),
               ),
           SignUpPage.routerName: (_) => ChangeNotifierProvider(
-                create: (_) {
+                create: (context) {
                   return SignUpController();
                 },
-                child: SignUpPage(themeData: theme),
+                child: SignUpPage(),
               ),
           LogInPage.routerName: (_) => ChangeNotifierProvider(
-                create: (_) {
-                  return LogInController();
+                create: (context) {
+                  var repository = context.read<UserRepository>();
+                  return LogInController(repository: repository);
                 },
-                child: LogInPage(themeData: theme),
+                child: LogInPage(),
               ),
         },
-        home: Scaffold(
-          backgroundColor: theme.backgroundColor.withOpacity(0.90),
-          appBar: AppBar(
-            title: Text(
-              'ToDo App',
-              style: GoogleFonts.oswald(
-                fontSize: 28,
-                fontWeight: FontWeight.w300,
-              ),
-            ),
-            actions: [
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(right: 12, top: 4),
-                    child: Center(
-                      child: RichText(
-                        text: TextSpan(
-                          text: 'Tema:',
-                          style: GoogleFonts.oswald(fontSize: 14),
-                        ),
-                      ),
-                    ),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(right: 12, top: 4),
-                    child: Center(
-                      child: InkWell(
-                        onTap: () {
-                          setState(() {
-                            _updateTheme();
-                          });
-                        },
-                        child: Icon(
-                          setThemeDark
-                              ? Icons.brightness_4_rounded
-                              : Icons.brightness_4_outlined,
-                          color: setThemeDark ? Colors.white : Colors.black,
-                        ),
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-            ],
-          ),
-          body: ChangeNotifierProvider(
-            create: (_) => LogInController(), //LogInController(),
-            child: LogInPage(themeData: theme),
-          ),
+        home: ChangeNotifierProvider(
+          //create: (context) => HomeController(repository: context.read<ToDosRepository>()), child: HomePage(themeData: theme),
+          create: (context) =>
+              LogInController(repository: context.read<UserRepository>()),
+          child: LogInPage(),
         ),
       ),
     );

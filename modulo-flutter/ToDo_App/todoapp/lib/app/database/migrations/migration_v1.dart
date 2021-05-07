@@ -6,7 +6,7 @@ void createV1(Batch batch) {
       id integer PRIMARY KEY AUTOINCREMENT,
       email varchar(120),
       user varchar(60),
-      password varchar(20),
+      password varchar(200),
       isactive integer,
       theme varchar(5)
     );
@@ -17,7 +17,8 @@ void createV1(Batch batch) {
       id integer PRIMARY KEY AUTOINCREMENT,
       description varchar (120),
       date_hour datetime,
-      isfinished integer
+      isfinished integer,
+      iduser integer
     );
     ''');
 }

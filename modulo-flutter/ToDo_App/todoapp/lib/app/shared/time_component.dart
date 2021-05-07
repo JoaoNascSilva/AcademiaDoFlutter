@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-
-import 'package:revenda_gas/main.dart';
+import 'package:revenda_gas/app/shared/app_colors.dart';
 
 class TimeComponent extends StatefulWidget {
   final DateTime date;
@@ -77,13 +76,13 @@ class _TimeComponentState extends State<TimeComponent> {
       height: 120,
       width: 100,
       decoration: BoxDecoration(
-        color: theme.primaryColor,
+        color: AppColors.orange,
         borderRadius: BorderRadius.circular(20),
         boxShadow: [
           BoxShadow(
             spreadRadius: 0,
             blurRadius: 6,
-            color: theme.primaryColor,
+            //  color: them primaryColor,
             offset: Offset(2, 5),
           ),
         ],

@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
+import 'package:revenda_gas/app/modules/home/home_page.dart';
 import 'package:revenda_gas/app/modules/new_task.dart/new_task_controller.dart';
+import 'package:revenda_gas/app/shared/app_colors.dart';
 import 'package:revenda_gas/app/shared/time_component.dart';
 
 class NewTaskPage extends StatefulWidget {
-  final ThemeData themeData;
   static String routerName = '/newtask';
-
-  const NewTaskPage({Key key, this.themeData}) : super(key: key);
 
   @override
   _NewTaskPageState createState() => _NewTaskPageState();
@@ -19,60 +18,63 @@ class _NewTaskPageState extends State<NewTaskPage> {
   void initState() {
     super.initState();
     //Chamado após o build ser criado
-    WidgetsBinding.instance.addPostFrameCallback((timeStamp) {
-      Provider.of<NewTaskController>(context, listen: false).addListener(() {
-        var controller = context.read<NewTaskController>();
-        if (controller.error != null) {
-          final _snackBar = SnackBar(
-            backgroundColor: Colors.red[300],
-            content: Text(
-              controller.error,
-              style: GoogleFonts.oswald(
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-                color: Colors.red[800],
-              ),
-            ),
-            action: SnackBarAction(
-              textColor: Colors.red[800],
-              label: 'X',
-              onPressed: () {},
-            ),
-            shape: RoundedRectangleBorder(),
-          );
+    WidgetsBinding.instance.addPostFrameCallback(
+      (timeStamp) {
+        Provider.of<NewTaskController>(context, listen: false).addListener(
+          () {
+            var controller = context.read<NewTaskController>();
+            if (controller.error != null) {
+              final _snackBar = SnackBar(
+                backgroundColor: Colors.red[300],
+                content: Text(
+                  controller.error,
+                  style: GoogleFonts.oswald(
+                    fontSize: 24,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.red[800],
+                  ),
+                ),
+                action: SnackBarAction(
+                  textColor: Colors.red[800],
+                  label: 'X',
+                  onPressed: () {},
+                ),
+                shape: RoundedRectangleBorder(),
+              );
 
-          ScaffoldMessenger.of(context).showSnackBar(_snackBar);
-        }
-        if (controller.saved) {
-          final _snackBar = SnackBar(
-            backgroundColor: Colors.green[300],
-            content: Text(
-              'Tarefa inserida com sucesso!',
-              style: GoogleFonts.oswald(
-                fontSize: 16,
-                fontWeight: FontWeight.bold,
-                color: Colors.green[800],
-              ),
-            ),
-            action: SnackBarAction(
-              textColor: Colors.green[800],
-              label: 'X',
-              onPressed: () {},
-            ),
-            shape: RoundedRectangleBorder(),
-          );
+              ScaffoldMessenger.of(context).showSnackBar(_snackBar);
+            }
+            if (controller.saved) {
+              final _snackBar = SnackBar(
+                backgroundColor: Colors.green[300],
+                content: Text(
+                  'Tarefa inserida com sucesso!',
+                  style: GoogleFonts.oswald(
+                    fontSize: 16,
+                    fontWeight: FontWeight.bold,
+                    color: Colors.green[800],
+                  ),
+                ),
+                action: SnackBarAction(
+                  textColor: Colors.green[800],
+                  label: 'X',
+                  onPressed: () {},
+                ),
+                shape: RoundedRectangleBorder(),
+              );
 
-          ScaffoldMessenger.of(context).showSnackBar(_snackBar);
-          Future.delayed(Duration(seconds: 1), () => Navigator.pop(context));
-        }
-      });
-    });
+              Future.delayed(
+                  Duration(seconds: 1), () => Navigator.pop(context));
+              ScaffoldMessenger.of(context).showSnackBar(_snackBar);
+            }
+          },
+        );
+      },
+    );
   }
 
   @override
   void dispose() {
-    Provider.of<NewTaskController>(context, listen: false)
-        .removeListener(() {});
     super.dispose();
   }
 
@@ -81,10 +83,31 @@ class _NewTaskPageState extends State<NewTaskPage> {
     return Consumer<NewTaskController>(
       builder: (context, controller, _) {
         return Scaffold(
-          backgroundColor: widget.themeData.backgroundColor,
-          appBar: AppBar(
-            backgroundColor: widget.themeData.backgroundColor,
-            elevation: 0,
+          appBar: PreferredSize(
+            preferredSize: Size.fromHeight(60),
+            child: Container(
+              padding: EdgeInsets.symmetric(horizontal: 8, vertical: 8),
+              color: AppColors.primaryColor,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamedAndRemoveUntil(
+                        context,
+                        HomePage.routerName,
+                        (route) => false,
+                      );
+                    },
+                    child: Icon(
+                      Icons.close,
+                      color: AppColors.white,
+                    ),
+                  ),
+                ],
+              ),
+            ),
           ),
           body: SingleChildScrollView(
             child: Form(
@@ -200,7 +223,7 @@ class _NewTaskPageState extends State<NewTaskPage> {
             width: controller.saved ? 80 : MediaQuery.of(context).size.width,
             height: controller.saved ? 80 : 40,
             decoration: BoxDecoration(
-              color: widget.themeData.primaryColor,
+              color: AppColors.primaryColor,
               borderRadius: controller.saved
                   ? BorderRadius.circular(180)
                   : BorderRadius.circular(8),
@@ -209,12 +232,12 @@ class _NewTaskPageState extends State<NewTaskPage> {
                     ? BoxShadow(
                         offset: Offset(2, 2),
                         blurRadius: 30,
-                        color: widget.themeData.primaryColor,
+                        color: AppColors.primaryColor,
                       )
                     : BoxShadow(
                         offset: Offset(2, 2),
                         blurRadius: 1,
-                        color: widget.themeData.primaryColor,
+                        color: AppColors.primaryColor,
                       ),
               ],
             ),
@@ -248,7 +271,6 @@ class _NewTaskPageState extends State<NewTaskPage> {
           ),
         ),
         onTap: () => !controller.saved ? controller.saveNewTask() : null,
-        //controller.saveNewTask(, dateTime)
       ),
     );
   }
